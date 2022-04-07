@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <meta charset="UTF-8"/>
+        <title>Cadastrar Artigo</title>
+    </head>
+
+    <body>
+        <div sec:authorize="isAuthenticated()" class="container">
+            <form class="form-group" method="post" th:action="@{/cadastrar}"th:object="${_a}" >
+              <input class="form-control" style="margin-bottom: 5px" type="text"name="titulo"placeholder="Titulo">
+              <input class="form-control" style="margin-bottom: 5px" type="text"name="resumo"placeholder="Resumo">
+              <input class="form-control" style="margin-bottom: 5px" type="text"name="publicado"placeholder="Situação">  
+              <input type="submit" class="btn btn-success" value="Cadastrar"/>
+            </form>
+      </div>
+    </body>
+
+</html>

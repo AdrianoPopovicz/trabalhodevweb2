@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Cadastrar Artigo</title>
+    </head>
+
+    <body>
+        <div sec:authorize="isAuthenticated()">                                  
+              <a th:href="@{/excluir}">Deletar Tudo</a>
+              
+            </form>
+      </div>
+    </body>
+
+</html>
